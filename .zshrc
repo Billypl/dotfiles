@@ -1,3 +1,58 @@
+############ CUSTOM SECTION ############
+
+## COLORS
+# set colors sudo apt install batfor LS_COLORS
+eval `dircolors ~/.dircolors`
+
+## ZSH
+alias reload-zsh="source ~/.zshrc && echo '~/.zshrc reloaded!'"
+
+## BAT
+alias bat="batcat"
+
+## GIT history
+alias lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
+
+## FZF
+# fzf + cd
+fcd() {
+	local dir
+	dir=$(dirname "$(fzf --preview "batcat --style=numbers --color=always {}")") && cd "$dir"
+}
+
+# fzf redifiniton with preview
+fzf() {
+    command fzf --preview "batcat --style=full --color=always {}" "$@"
+}
+
+# reloading configs
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+source ~/.tmux.conf
+
+
+## new instance behaviour
+[[ -n "$WT_SESSION" ]] && {
+  chpwd() {
+    echo -en '\e]9;9;"'
+    wslpath -w "$PWD" | tr -d '\n'
+    echo -en '"\x07'
+  }
+}
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+############ DEFAULT SECTION ############
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -104,61 +159,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-
-
-########## CUSTOM SECTION ############
-
-## COLORS
-# set colors sudo apt install batfor LS_COLORS
-eval `dircolors ~/.dircolors`
-
-## ZSH
-alias reload-zsh="source ~/.zshrc && echo '~/.zshrc reloaded!'"
-
-## BAT
-alias bat="batcat"
-
-## GIT history
-alias lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
-
-## FZF
-# fzf + cd
-fcd() {
-	local dir
-	dir=$(dirname "$(fzf --preview "batcat --style=numbers --color=always {}")") && cd "$dir"
-}
-
-# fzf redifiniton with preview
-fzf() {
-    command fzf --preview "batcat --style=full --color=always {}" "$@"
-}
-
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
-
-## new instance behaviour
-[[ -n "$WT_SESSION" ]] && {
-  chpwd() {
-    echo -en '\e]9;9;"'
-    wslpath -w "$PWD" | tr -d '\n'
-    echo -en '"\x07'
-  }
-}
-
-
-
-
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
