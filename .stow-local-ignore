@@ -23,6 +23,5 @@ _darcs
 ^/COPYING
 
 # Custom
-
-^/packages.md
-^/windows.md
+^/linux
+^/windows

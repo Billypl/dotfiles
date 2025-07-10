@@ -19,4 +19,3 @@ To install:
 - amd adrenalin  
 - amd ryzen master  
 - vsc  
-
