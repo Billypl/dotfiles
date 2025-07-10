@@ -1,11 +1,22 @@
 To install:
-- chrome
-- operaGX
-- wsl2
-- ExplorerPacher
-- PowerToys
-- Steam
-- Discord
-- LogitechGHub
-- GG software
+- chrome  
+- operaGX  
+- wsl2  
+- ExplorerPacher  
+- PowerToys  
+- Steam  
+- EpicGames  
+- Discord  
+- OBS  
+- LogitechGHub  
+- GG software  
+- staacher7  
+- iCUE  
+- genesis thor 401  
+- crystal disk mark  
+- msi center  
+- nvidia app  
+- amd adrenalin  
+- amd ryzen master  
+- vsc  
 
