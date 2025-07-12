@@ -4,6 +4,11 @@
 # set colors sudo apt install batfor LS_COLORS
 eval `dircolors ~/.dircolors`
 
+#### ALIASES ####
+
+## REMOTE
+alias rpc="ssh billy@100.109.76.12 -p 2222"
+
 ## ZSH
 alias reload-zsh="source ~/.zshrc && echo '~/.zshrc reloaded!'"
 
