@@ -1,21 +1,33 @@
-To install:
-- chrome  
-- operaGX  
-- wsl2  
+# To install:
+## Browsers
+- Chrome  
+- OperaGX  
+
+## Tools
+### General
+- WSL2  
+- Tailscale  
 - ExplorerPacher  
-- PowerToys  
-- Steam  
-- EpicGames  
-- Discord  
+- PowerToys
 - OBS  
+- VS Code
+- Staacher7  
+
+### Appearance
 - LogitechGHub  
-- GG software  
-- staacher7  
+- SteelSeries GG  
 - iCUE  
-- genesis thor 401  
-- crystal disk mark  
-- msi center  
-- nvidia app  
-- amd adrenalin  
-- amd ryzen master  
-- vsc  
+- Genesis Thor 401  
+- MSI Center  
+- Nvidia App  
+- Amd Adrenalin  
+- Amd Ryzen Master 
+
+- Crystal Disk Mark  
+- Crystal Disk Info
+
+## Communication
+- Discord  
+- Steam  
+- Epic Games 
+- Link To Phone  

@@ -7,6 +7,7 @@ eval `dircolors ~/.dircolors`
 #### ALIASES ####
 
 ## REMOTE
+RPCIP="100.109.76.12"
 alias rpc="ssh billy@100.109.76.12 -p 2222"
 
 ## ZSH
