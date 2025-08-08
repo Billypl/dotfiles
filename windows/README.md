@@ -30,7 +30,8 @@
 - [Everything](https://www.voidtools.com) - szybki przeszukiwacz plików
 - [RevoUninstaller](https://www.revouninstaller.com) - better uninstaller
 - [System Informer](https://systeminformer.com/downloads) - lepszy menedżer zadań
-
+- [Cracked Adobe](https://www.youtube.com/watch?v=4sXCPx-yCyA)
+- [Cracked Spotify](https://www.youtube.com/watch?v=y_m1Ta0Qj1c)
 
 ## Communication
 - [Discord](https://discord.com)  
