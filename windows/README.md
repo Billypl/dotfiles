@@ -1,7 +1,7 @@
 # To install:
 ## Browsers
-- Chrome  
-- OperaGX  
+- [Chrome](https://www.google.com/chrome)  
+- [OperaGX](https://www.opera.com/pl/gx)  
 
 ## Tools
 ### General
@@ -14,21 +14,22 @@
 - [Staacher7](https://stacher.io) - pobieranie filmików z yt, nakładka na narzędzie CLI [yt-dlp](https://github.com/yt-dlp/yt-dlp)  
 
 ### Appearance
-- [LogitechGHub](https://www.logitechg.com/pl-pl/innovation/g-hub.html) - oprogramowanie do myszki    
-- [SteelSeries GG](https://steelseries.com/gg) - Sonar do dźwięku oraz Moments do łatwego clipowania i udostępniania gier
-- [iCUE](https://www.corsair.com/ww/en/s/icue?srsltid=AfmBOoqYYcsjxsYgcK9oGCbZRs1JnnmakMHYTSP0w1FB_RJGTEyONQHU)    
+- [LogitechGHub](https://www.logitechg.com/pl-pl/innovation/g-hub.html) - sterowniki do myszki    
+- [SteelSeries GG](https://steelseries.com/gg) - sterwoniki do słuchawek + Sonar do dźwięku oraz Moments do łatwego clipowania i udostępniania gier
 - [Genesis Thor 401  ](https://genesis-zone.com/support/4162,thor-401-rgb) - sterowniki i oprogramowanie do klawiatury
-- [MSI Center](https://ca.msi.com/Landing/MSI-Center)   
-- [Nvidia App](https://www.nvidia.com/en-us/software/nvidia-app)  
-- [Amd Adrenalin](https://www.amd.com/en/products/software/adrenalin.html)    
-- [Amd Ryzen Master](https://www.amd.com/en/products/software/ryzen-master.html)  
+- [iCUE](https://www.corsair.com/ww/en/s/icue?srsltid=AfmBOoqYYcsjxsYgcK9oGCbZRs1JnnmakMHYTSP0w1FB_RJGTEyONQHU) - kolorki chłodzenia  
+- [MSI Center](https://ca.msi.com/Landing/MSI-Center) - kolorki obudowy  
+- [Nvidia App](https://www.nvidia.com/en-us/software/nvidia-app)  - ogólna apka Nvidii
+- [Amd Adrenalin](https://www.amd.com/en/products/software/adrenalin.html) - ogólna apka AMD
+- [Amd Ryzen Master](https://www.amd.com/en/products/software/ryzen-master.html) - overclocking AMD
  
  ### Advanced
 - [Crystal Disk Mark](https://crystalmark.info/en/software/crystaldiskmark)   
 - [Crystal Disk Info](https://crystalmark.info/en/software/crystaldiskinfo)  
-- [WinDirStat](https://windirstat.net/download.html)  
-- [Everything](https://www.voidtools.com)
-- [RevoUninstaller](https://www.revouninstaller.com)
+- [WinDirStat](https://windirstat.net/download.html) - spis i zajętość folderów, weryfikacja 
+- [Everything](https://www.voidtools.com) - szybki przeszukiwacz plików
+- [RevoUninstaller](https://www.revouninstaller.com) - better uninstaller
+- [System Informer](https://systeminformer.com/downloads) - lepszy menedżer zadań
 
 
 ## Communication
