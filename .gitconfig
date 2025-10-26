@@ -1,3 +1,8 @@
+[user]
+    email = kriper01@wp.pl
+    name = Billypl
+
 [core]
     autocrlf = input
     safecrlf = warn
+    editor = code --wait

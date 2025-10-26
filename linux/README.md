@@ -18,3 +18,13 @@ zsh -> https://blog.joaograssi.com/windows-subsystem-for-linux-with-oh-my-zsh-co
 wslpath // translates linux path to windows one (wsl)
 sc.exe config wslservice start= demand // fix wsl (cmd)
 ```
+
+# Install ZSH
+```bash
+sudo apt install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# Install, download and set in terminal those fonts: https://github.com/romkatv/powerlevel10k#fonts
+source ~/.zshrc
+```
