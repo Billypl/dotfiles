@@ -25,6 +25,6 @@ sudo apt install zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# Install, download and set in terminal those fonts: https://github.com/romkatv/powerlevel10k#fonts
+# Install, download and set in terminal settings this font: https://github.com/romkatv/powerlevel10k#fonts
 source ~/.zshrc
 ```
