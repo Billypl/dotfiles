@@ -1,3 +1,14 @@
+## POWER LEVEL 10K ##
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+
+export LS_COLORS="rs=0:no=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:st=34:tw=04;34:pi=01;33:so=01;33:do=01;33:bd=01;33:cd=01;33:su=01;35:sg=01;35:ca=01;35:ex=01;32:"
+
 ############ CUSTOM SECTION ############
 
 ## COLORS
@@ -5,10 +16,6 @@
 eval `dircolors ~/.dircolors`
 
 #### ALIASES ####
-
-## REMOTE
-RPCIP="100.109.76.12"
-alias rpc="ssh billy@100.109.76.12 -p 2222"
 
 ## ZSH
 alias reload-zsh="source ~/.zshrc && echo '~/.zshrc reloaded!'"
@@ -19,6 +26,16 @@ alias bat="batcat"
 ## GIT history
 alias lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
 
+## GIT blame history 
+## usage - gll line_start,line_end filepath
+alias gll='_gll() { git log -U0 -L "$1":"$2" --format="%n%C(yellow)%h%Creset | Author: %an <%ae>%nDate: %C(blue)%ad | %ai%Creset%nTitle: %s" --date=format:"%a %b %d" --color=always | grep -vP "(?:\x1b\[[0-9;]*m)*(diff --git|--- a/|\+\+\+ b/|@@ )|^ " | less -R; }; _gll'
+
+## GIT tag
+alias gt="git tag --sort=-v:refname | head -1"
+
+## GET TOKEN
+alias gtoken="gcloud auth print-access-token | clip.exe"
+
 ## FZF
 # fzf + cd
 fcd() {
@@ -26,14 +43,13 @@ fcd() {
 	dir=$(dirname "$(fzf --preview "batcat --style=numbers --color=always {}")") && cd "$dir"
 }
 
+# fzf - ctrl + r
+source <(fzf --zsh)
+
 # fzf redifiniton with preview
 fzf() {
     command fzf --preview "batcat --style=full --color=always {}" "$@"
 }
-
-# reloading configs
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
 
 ## new instance behaviour
 [[ -n "$WT_SESSION" ]] && {
@@ -52,9 +68,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 ############ DEFAULT SECTION ############
 
 # If you come from bash you might have to change your $PATH.
@@ -68,7 +81,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -130,7 +143,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -164,6 +177,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/snap/bin:$PATH"
+export PATH="/snap/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

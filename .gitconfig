@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[core]
+	autocrlf = true
+	editor = vim
+	fileMode = false
+
+[push]
+	autoSetupRemote = true
