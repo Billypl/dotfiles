@@ -1,4 +1,7 @@
-# This is Git's per-user configuration file.
+[user]
+    email = kriper01@wp.pl
+    name = Billypl
+
 [core]
 	autocrlf = true
 	editor = vim

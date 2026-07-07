@@ -7,6 +7,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 
+export ZSH="$HOME/.oh-my-zsh"
+
 export LS_COLORS="rs=0:no=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:st=34:tw=04;34:pi=01;33:so=01;33:do=01;33:bd=01;33:cd=01;33:su=01;35:sg=01;35:ca=01;35:ex=01;32:"
 
 ############ CUSTOM SECTION ############
@@ -16,6 +18,21 @@ export LS_COLORS="rs=0:no=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:
 eval `dircolors ~/.dircolors`
 
 #### ALIASES ####
+
+## GIT
+alias lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
+
+# exclude file from git add all
+gae() {
+  local default_file=""
+  local file="${1:-$default_file}"
+  if [ -z "$file" ]; then
+    echo "Error: Please specify a file to ignore" >&2
+    return 1
+  fi
+  git -C "$(git rev-parse --show-toplevel)" add -A && \
+  git -C "$(git rev-parse --show-toplevel)" reset "$file"
+}
 
 ## ZSH
 alias reload-zsh="source ~/.zshrc && echo '~/.zshrc reloaded!'"
@@ -143,6 +160,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins=(git colored-man-pages)
 plugins=(git colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
